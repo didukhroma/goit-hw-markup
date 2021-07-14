@@ -1040,6 +1040,7 @@
 
 .hero {
   text-align: center;
+  margin: 0 auto;
   padding: 118px 0px;
 }
 
@@ -1050,6 +1051,7 @@
 }
 
 .hero__overlay {
+  margin: 0 auto;
   max-width: 1600px;
   background-color: #c4c4c4;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/background/bg-mobile.jpg");
@@ -1087,7 +1089,7 @@
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (mmin-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero__overlay {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/background/bg-desktop@2x.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background/bg-desktop@2x.jpg");
