@@ -1,0 +1,45 @@
+@import "./variables";
+@import "./mixins";
+@import "./brakepoints";
+
+%centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%list {
+  list-style: none;
+}
+
+%link {
+  display: block;
+  text-decoration: none;
+}
+
+%img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+%section-title {
+  text-align: center;
+  @include font($main-font-family, 700, 28px, 33px);
+
+  @media screen and (min-width: $desktop) {
+    @include font($main-font-family, 700, 36px, 42px);
+  }
+
+  color: $primary-text-color;
+}
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}

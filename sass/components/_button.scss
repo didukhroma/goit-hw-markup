@@ -1,0 +1,25 @@
+.btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 32px;
+
+  min-width: 200px;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @include font($main-font-family, 700, 16px, 30px, 0.06em);
+
+  color: $white-color;
+  background-color: $accent-color;
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $button-activ-color;
+  }
+}

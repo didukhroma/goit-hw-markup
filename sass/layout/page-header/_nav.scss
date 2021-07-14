@@ -1,0 +1,48 @@
+@import "../../utils/mixins";
+@import "../../utils/placeholders";
+.nav {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    @media screen and (min-width: $desktop) {
+      margin-right: 93px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    &:hover .nav__icon,
+    &:focus .nav__icon {
+      fill: $accent-color;
+    }
+    & .nav__icon--close {
+      display: none;
+    }
+
+    &.is-open .nav__icon--close {
+      display: block;
+    }
+
+    &.is-open .nav__icon--open {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+  &__icon {
+    @extend %centered;
+    @include transition(fill);
+  }
+}

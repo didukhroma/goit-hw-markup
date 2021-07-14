@@ -1,0 +1,17 @@
+@import "./variables";
+//----------FONT------------------------
+@mixin font($font-family, $font-weight, $font-size, $line-height, $letter-spacing: 0.03em) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height/$font-size;
+  letter-spacing: $letter-spacing;
+}
+
+//----------TRANSITION----------------
+@mixin transition($transition-property) {
+  transition-property: $transition-property;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+}

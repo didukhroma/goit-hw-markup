@@ -1,0 +1,77 @@
+.subscribe {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    flex-grow: 1;
+
+    &__form {
+      display: flex;
+    }
+  }
+
+  width: 100%;
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    max-width: 450px;
+  }
+
+  &__field {
+    @extend %centered;
+    position: relative;
+    flex-grow: 1;
+    align-items: center;
+
+    @media screen and (max-width: $desktop - 1px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 12px;
+    }
+  }
+  &__label {
+    position: absolute;
+    left: 16px;
+    //top: 50%;
+    //transform: translateY(-50%);
+    margin: 0;
+
+    @include font($main-font-family, 400, 16px, 20px);
+
+    color: rgba(255, 255, 255, 0.6);
+
+    @include transition(color);
+  }
+  &__input {
+    padding: 15px 16px 15px 79px;
+
+    width: 100%;
+
+    @include font($main-font-family, 400, 16px, 20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    @include transition(border);
+  }
+  &__input:focus + &__label {
+    color: $accent-color;
+  }
+  &__input:hover + &__label {
+    cursor: pointer;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+  &__input::placeholder {
+    @include font($main-font-family, 400, 16px, 20px);
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../utils/placeholders";
+.site-nav {
+  @extend %list;
+  @include font($main-font-family, 500, 18px, 21px, 0.02em);
+
+  @media screen and (max-width: $tablet - 1px) {
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include font($main-font-family, 500, 14px, 16px, 0.02em);
+    display: flex;
+  }
+
+  &__item {
+    @media screen and (min-width: $tablet) {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    //@extend %link;
+    padding-bottom: 8px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 32px 0;
+    }
+
+    text-decoration: none;
+    color: $primary-text-color;
+
+    @include transition(color);
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &--current {
+      position: relative;
+
+      color: $accent-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+        width: 100%;
+        height: 4px;
+
+        background: $accent-color;
+        border-radius: 2px;
+      }
+    }
+  }
+}

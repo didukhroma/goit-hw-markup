@@ -1,0 +1,34 @@
+.address {
+  font-style: normal;
+  &__list {
+    @extend %list;
+  }
+  &__item:not(:last-child) {
+    @media screen and (max-width: $desktop - 1px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__map,
+  &__link {
+    @extend %link;
+    @include font($main-font-family, 400, 14px, 24px);
+
+    color: rgba(255, 255, 255, 0.6);
+
+    @include transition(color);
+  }
+  &__map {
+    color: #ffffff;
+  }
+
+  &__map:hover,
+  &__map:focus,
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+  @media screen and (min-width: $desktop) {
+    text-align: start;
+  }
+}
